@@ -9,7 +9,7 @@ target 'HaLyShop' do
 	pod 'CodableFirebase'
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
-	pod 'SVProgressHUD'
+  pod 'FirebaseDatabase'
 
 post_install do |installer|
  installer.pods_project.targets.each do |target|

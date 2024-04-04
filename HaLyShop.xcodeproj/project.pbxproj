@@ -14,6 +14,11 @@
 		E956BBFA2BBD9961009AC635 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BBF82BBD9961009AC635 /* LoginViewController.swift */; };
 		E956BBFB2BBD9961009AC635 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E956BBF92BBD9961009AC635 /* LoginViewController.xib */; };
 		E9B7D80E2BBDA81D00C19E73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9B7D80D2BBDA81D00C19E73 /* GoogleService-Info.plist */; };
+		E9B7D8122BBDB21400C19E73 /* ContentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D80F2BBDB21400C19E73 /* ContentsTableViewCell.swift */; };
+		E9B7D8132BBDB21400C19E73 /* ContentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B7D8102BBDB21400C19E73 /* ContentsTableViewCell.xib */; };
+		E9B7D8172BBDB27E00C19E73 /* ListKhachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B7D8162BBDB27E00C19E73 /* ListKhachViewController.xib */; };
+		E9B7D8182BBDB27E00C19E73 /* ListKhachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D8152BBDB27E00C19E73 /* ListKhachViewController.swift */; };
+		E9B7D81A2BBDBF1000C19E73 /* BanHangViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B7D8192BBDBF1000C19E73 /* BanHangViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		E956BBF82BBD9961009AC635 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E956BBF92BBD9961009AC635 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		E9B7D80D2BBDA81D00C19E73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E9B7D80F2BBDB21400C19E73 /* ContentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentsTableViewCell.swift; sourceTree = "<group>"; };
+		E9B7D8102BBDB21400C19E73 /* ContentsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentsTableViewCell.xib; sourceTree = "<group>"; };
+		E9B7D8152BBDB27E00C19E73 /* ListKhachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKhachViewController.swift; sourceTree = "<group>"; };
+		E9B7D8162BBDB27E00C19E73 /* ListKhachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListKhachViewController.xib; sourceTree = "<group>"; };
+		E9B7D8192BBDBF1000C19E73 /* BanHangViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanHangViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		E956BBE22BBD97CA009AC635 /* HaLyShop */ = {
 			isa = PBXGroup;
 			children = (
+				E9B7D8142BBDB22A00C19E73 /* ListKhachHang */,
 				E9B7D80D2BBDA81D00C19E73 /* GoogleService-Info.plist */,
 				E95A7EAC2BBDA67E005C5A47 /* Common */,
 				E956BBF72BBD9948009AC635 /* Login */,
@@ -96,6 +107,26 @@
 			children = (
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E9B7D8112BBDB21400C19E73 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				E9B7D80F2BBDB21400C19E73 /* ContentsTableViewCell.swift */,
+				E9B7D8102BBDB21400C19E73 /* ContentsTableViewCell.xib */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
+		E9B7D8142BBDB22A00C19E73 /* ListKhachHang */ = {
+			isa = PBXGroup;
+			children = (
+				E9B7D8192BBDBF1000C19E73 /* BanHangViewModel.swift */,
+				E9B7D8112BBDB21400C19E73 /* CellView */,
+				E9B7D8152BBDB27E00C19E73 /* ListKhachViewController.swift */,
+				E9B7D8162BBDB27E00C19E73 /* ListKhachViewController.xib */,
+			);
+			path = ListKhachHang;
 			sourceTree = "<group>";
 		};
 		EA3E5401BD8AD5EC49339C71 /* Pods */ = {
@@ -169,6 +200,8 @@
 			files = (
 				E956BBED2BBD97CB009AC635 /* Assets.xcassets in Resources */,
 				E9B7D80E2BBDA81D00C19E73 /* GoogleService-Info.plist in Resources */,
+				E9B7D8172BBDB27E00C19E73 /* ListKhachViewController.xib in Resources */,
+				E9B7D8132BBDB21400C19E73 /* ContentsTableViewCell.xib in Resources */,
 				E956BBF02BBD97CB009AC635 /* Base in Resources */,
 				E956BBFB2BBD9961009AC635 /* LoginViewController.xib in Resources */,
 			);
@@ -223,7 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B7D8122BBDB21400C19E73 /* ContentsTableViewCell.swift in Sources */,
 				E956BBFA2BBD9961009AC635 /* LoginViewController.swift in Sources */,
+				E9B7D8182BBDB27E00C19E73 /* ListKhachViewController.swift in Sources */,
+				E9B7D81A2BBDBF1000C19E73 /* BanHangViewModel.swift in Sources */,
 				E956BBE42BBD97CA009AC635 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

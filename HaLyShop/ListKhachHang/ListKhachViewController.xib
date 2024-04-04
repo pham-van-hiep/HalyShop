@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListKhachViewController" customModule="HaLyShop" customModuleProvider="target">
+            <connections>
+                <outlet property="listKhachTableView" destination="hjp-tA-D7y" id="SJQ-8x-JG3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7Q-OA-sSX">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh Sách Khách Hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-wa-QLH">
+                            <rect key="frame" x="116.00000000000001" y="11" width="161.33333333333337" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGl-Tw-dwB">
+                            <rect key="frame" x="291" y="3" width="100" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="VSw-O4-PFD"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Thêm mới">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-BV-NN8">
+                            <rect key="frame" x="2" y="3" width="100" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="cLh-Om-9vk"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Trở lại">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstItem="s9Y-wa-QLH" firstAttribute="centerY" secondItem="x7Q-OA-sSX" secondAttribute="centerY" id="3xy-RT-ShL"/>
+                        <constraint firstItem="s9Y-wa-QLH" firstAttribute="centerX" secondItem="x7Q-OA-sSX" secondAttribute="centerX" id="BZt-AJ-xg2"/>
+                        <constraint firstAttribute="bottom" secondItem="aGl-Tw-dwB" secondAttribute="bottom" constant="3" id="DcQ-hh-bGz"/>
+                        <constraint firstItem="4Yi-BV-NN8" firstAttribute="leading" secondItem="x7Q-OA-sSX" secondAttribute="leading" constant="2" id="FnG-xG-xJK"/>
+                        <constraint firstAttribute="trailing" secondItem="aGl-Tw-dwB" secondAttribute="trailing" constant="2" id="Gcm-oB-pIk"/>
+                        <constraint firstAttribute="bottom" secondItem="4Yi-BV-NN8" secondAttribute="bottom" constant="3" id="UG7-Rq-qle"/>
+                        <constraint firstItem="aGl-Tw-dwB" firstAttribute="top" secondItem="x7Q-OA-sSX" secondAttribute="top" constant="3" id="b61-yg-Nfb"/>
+                        <constraint firstItem="4Yi-BV-NN8" firstAttribute="top" secondItem="x7Q-OA-sSX" secondAttribute="top" constant="3" id="qzy-iC-psa"/>
+                        <constraint firstAttribute="height" constant="40" id="wyO-rk-RHw"/>
+                    </constraints>
+                </view>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6WP-ve-otA">
+                    <rect key="frame" x="20" y="104" width="353" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="iwS-fc-IJf"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Đang giao dịch"/>
+                        <segment title="Toàn bộ"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hjp-tA-D7y">
+                    <rect key="frame" x="0.0" y="144" width="393" height="638"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3k-Lz-Lbo">
+                    <rect key="frame" x="0.0" y="792" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsL-7Y-IbE">
+                            <rect key="frame" x="1" y="1" width="100" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="hX7-IB-07U"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Hoa Quả">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2M-1Q-Kbs">
+                            <rect key="frame" x="146.66666666666666" y="1" width="100" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="iuf-7M-Ttf"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Đồ Lễ">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOf-a7-0xC">
+                            <rect key="frame" x="292" y="1" width="100" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="nkH-Pi-FmB"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Khác">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="bsL-7Y-IbE" secondAttribute="bottom" constant="1" id="9LH-ti-4Af"/>
+                        <constraint firstItem="bsL-7Y-IbE" firstAttribute="leading" secondItem="r3k-Lz-Lbo" secondAttribute="leading" constant="1" id="GRn-9j-8nC"/>
+                        <constraint firstAttribute="bottom" secondItem="K2M-1Q-Kbs" secondAttribute="bottom" constant="1" id="KEu-ao-mQE"/>
+                        <constraint firstItem="K2M-1Q-Kbs" firstAttribute="centerY" secondItem="r3k-Lz-Lbo" secondAttribute="centerY" id="NSu-sl-rUp"/>
+                        <constraint firstItem="bsL-7Y-IbE" firstAttribute="top" secondItem="r3k-Lz-Lbo" secondAttribute="top" constant="1" id="Qkw-PN-9C4"/>
+                        <constraint firstItem="fOf-a7-0xC" firstAttribute="top" secondItem="r3k-Lz-Lbo" secondAttribute="top" constant="1" id="REN-KC-56S"/>
+                        <constraint firstItem="K2M-1Q-Kbs" firstAttribute="centerX" secondItem="r3k-Lz-Lbo" secondAttribute="centerX" id="RxW-nn-kIK"/>
+                        <constraint firstAttribute="bottom" secondItem="fOf-a7-0xC" secondAttribute="bottom" constant="1" id="b0G-r3-Dsp"/>
+                        <constraint firstAttribute="height" constant="40" id="gO4-KT-RuS"/>
+                        <constraint firstAttribute="trailing" secondItem="fOf-a7-0xC" secondAttribute="trailing" constant="1" id="nSa-qI-Zox"/>
+                        <constraint firstItem="K2M-1Q-Kbs" firstAttribute="top" secondItem="r3k-Lz-Lbo" secondAttribute="top" constant="1" id="q8g-a3-HgF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="r3k-Lz-Lbo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Kw-CO-yMt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x7Q-OA-sSX" secondAttribute="trailing" id="BKa-22-MjJ"/>
+                <constraint firstItem="hjp-tA-D7y" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ddm-de-lwd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r3k-Lz-Lbo" secondAttribute="trailing" id="Zsg-AA-yv5"/>
+                <constraint firstAttribute="bottom" secondItem="r3k-Lz-Lbo" secondAttribute="bottom" constant="20" id="a1h-dW-rWi"/>
+                <constraint firstItem="r3k-Lz-Lbo" firstAttribute="top" secondItem="hjp-tA-D7y" secondAttribute="bottom" constant="10" id="d9Q-St-NWp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6WP-ve-otA" secondAttribute="trailing" constant="20" id="gin-0X-dF3"/>
+                <constraint firstItem="6WP-ve-otA" firstAttribute="top" secondItem="x7Q-OA-sSX" secondAttribute="bottom" constant="5" id="hd0-2q-OC6"/>
+                <constraint firstItem="hjp-tA-D7y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="i5D-3T-4k7"/>
+                <constraint firstItem="x7Q-OA-sSX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="k2G-02-u9P"/>
+                <constraint firstItem="hjp-tA-D7y" firstAttribute="top" secondItem="6WP-ve-otA" secondAttribute="bottom" constant="10" id="uHz-S6-Zux"/>
+                <constraint firstItem="x7Q-OA-sSX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uWY-jM-diD"/>
+                <constraint firstItem="6WP-ve-otA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yf2-5D-v5g"/>
+            </constraints>
+            <point key="canvasLocation" x="29.770992366412212" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,18 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDP-i2-BjO">
-                    <rect key="frame" x="152.66666666666666" y="415.66666666666669" width="88" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rY-yi-RT3">
+                    <rect key="frame" x="166.33333333333334" y="406.66666666666669" width="60.666666666666657" height="39"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Go!!!"/>
+                    <connections>
+                        <action selector="goBtnDidTapped:" destination="-1" eventType="touchUpInside" id="Cn0-uU-RfQ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="EDP-i2-BjO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ofz-XW-m4K"/>
-                <constraint firstItem="EDP-i2-BjO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ssz-eb-JQE"/>
+                <constraint firstItem="0rY-yi-RT3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GGJ-BX-cf9"/>
+                <constraint firstItem="0rY-yi-RT3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s22-tE-ot1"/>
             </constraints>
             <point key="canvasLocation" x="140" y="20"/>
         </view>

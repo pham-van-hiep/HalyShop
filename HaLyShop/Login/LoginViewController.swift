@@ -12,4 +12,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction func goBtnDidTapped(_ sender: UIButton) {
+        let listKhachViewController = ListKhachViewController(nibName: "ListKhachViewController", bundle: nil)
+        listKhachViewController.modalPresentationStyle = .fullScreen
+        self.present(listKhachViewController, animated: true, completion: nil)
+    }
+    
 }
